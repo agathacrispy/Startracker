@@ -4,7 +4,8 @@ A camera mount that looks up where a planet or star is in the sky and points a c
 
 ## How it works
 
-The mount moves on two axes: altitude (up/down) and azimuth (left/right, relative to north)
+The mount moves on two axes: altitude (up/down) and azimuth (left/right, relative to north).
+
 A local Python script does the math: given an object (a planet, the Moon, or a star), it calculates that object's current altitude and azimuth for your exact location and sends the mount there over a serial connection to an Arduino, which drives the stepper motor. 
 
 Option to `track` something instead of just `goto` it, and it keeps recalculating the position every so often and re-issuing the move, so the mount follows the object across the sky.
